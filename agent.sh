@@ -48,6 +48,7 @@ EOF
 
 # Set up virtual environment
 echo "[+] Creating virtual environment"
+sudo apt install python3-venv
 python3 -m venv "$VENV_DIR"
 
 echo "[+] Installing dependencies"
