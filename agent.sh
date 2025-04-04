@@ -14,7 +14,7 @@ echo "Enter Agent ID (e.g., IN-01):"
 read AGENT_ID
 
 echo "Enter API Key:"
-read -s API_KEY
+read API_KEY
 
 echo "Enter Base API URL (e.g., https://yourdomain.com):"
 read BASE_URL
