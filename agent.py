@@ -34,7 +34,7 @@ def get_usage():
         "disk": f"{round(psutil.disk_usage('/').used/1000000000, 2)}GB / {round(psutil.disk_usage('/').total/1000000000, 2)}GB",
         "uptime": uptime_stamp,
         "cpuinfo": cpuinfo.get_cpu_info()["brand_raw"],
-        "threads": cpuinfo.get_cpu_info()["count"]
+        "threads": cpuinfo.get_cpu_info()["count"],
         "ip": ip
     }
 
