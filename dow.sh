@@ -1,7 +1,4 @@
-echo "installing packages"
-sudo apt update
-sudo apt install unzip
-sudo apt install axel
+
 echo "downloading zip"
 cd /home/container/series
 axel -n 10 {{ZIP_URL}}
