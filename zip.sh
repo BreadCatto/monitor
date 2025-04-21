@@ -1,6 +1,6 @@
 
 echo "downloading zip"
-cd /home/container/series
+cd /home/container/series/{FOLDER}
 wget {{ZIP_URL}}
 echo "extracting zip"
 FILENAME=$(basename "$ZIP_URL")
