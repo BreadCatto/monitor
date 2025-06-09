@@ -24,8 +24,6 @@ def get_usage():
     time %= 60
     seconds = time
     uptime_stamp = ("%dd %dh %dm %ds" % (day, hour, minutes, seconds))
-    res = requests.get("ipinfo.io").json()
-    ip = res['ip']
     return {
         "id": ID,
         "cpu": psutil.cpu_percent(),
@@ -34,8 +32,7 @@ def get_usage():
         "disk": f"{round(psutil.disk_usage('/').used/1000000000, 2)}GB / {round(psutil.disk_usage('/').total/1000000000, 2)}GB",
         "uptime": uptime_stamp,
         "cpuinfo": cpuinfo.get_cpu_info()["brand_raw"],
-        "threads": cpuinfo.get_cpu_info()["count"],
-        "ip": ip
+        "threads": cpuinfo.get_cpu_info()["count"]
     }
 
 while True:
